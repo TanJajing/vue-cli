@@ -1,0 +1,17 @@
+[
+  {
+    "url": "/permissions",
+    "desc": "测试接口",
+    "mock": true,
+    "res": {
+      "code": 1,
+      "msg": "success",
+      "data": [
+        {
+          "menuId": 1,
+          "name": "首页"
+        }
+      ]
+    }
+  }
+]

@@ -3,7 +3,8 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaVersion: 8
   },
   env: {
     browser: true,
@@ -23,7 +24,12 @@ module.exports = {
   rules: {
     // allow async-await
     'generator-star-spacing': 'off',
+    "comma-dangle": ["off"],
+    // 最后一行结束不强制换行
+    "eol-last": 0,
+    "no-throw-literal": 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'semi': ['error', 'always']
   }
 }
