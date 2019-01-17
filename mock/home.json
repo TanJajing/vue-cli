@@ -1,0 +1,69 @@
+[
+  {
+    "url": "/home",
+    "desc": "有页面",
+    "mock": true,
+    "res": {
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
+      "data": {
+        "totalcount": 2,
+        "list": []
+      }
+    }
+  },
+  {
+    "url": "/",
+    "desc": "",
+    "mock": true,
+    "res": {
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
+      "data": {
+        "list": []
+      }
+    }
+  },
+  {
+    "url": "/",
+    "desc": "",
+    "mock": true,
+    "res": {
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
+      "data": {
+        "list": []
+      }
+    }
+  },
+  {
+    "url": "/",
+    "desc": "",
+    "mock": true,
+    "res": {
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
+      "data": "success"
+    }
+  },
+  {
+    "url": "/business-manage/chuliren",
+    "desc": "商机总览",
+    "mock": true,
+    "res": {
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
+      "data": {}
+    }
+  }
+]
