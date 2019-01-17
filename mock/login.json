@@ -13,8 +13,10 @@
     "desc": "登录",
     "mock": true,
     "res": {
-      "code": 1,
-      "msg": "success",
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
       "data": {
         "username": "admin",
         "userId": "1",

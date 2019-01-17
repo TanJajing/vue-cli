@@ -14,17 +14,15 @@ export default {
     ConHeader
   },
   beforeMount () {
-    this.getUserRole({});
   },
   computed: {
     ...mapState({
-      currentUser: ({ root }) => root.currentUser,
       pageLoading: ({ root }) => root.pageLoading
     })
   },
   methods: {
     ...mapActions([
-      'getUserRole'
+      'getMenuList'
     ]),
     ...mapMutations({
       _addRoutes: 'ADD_ROUTES'

@@ -20,11 +20,12 @@ export default (url, params, method, config) => {
     }
 
     ajx.then(res => {
-      debugger;
       if (String(res.status) === '401') {
         store.commit('ROUTE_CHANGE', { path: '/login' });
       } else if (String(res.status) === '200') {
-        resolve(res.data);
+        if (String(res.data.errorInfo.code) === '200') {
+          resolve(res.data);
+        }
       } else {
         // 防止防止多次执行Message，需要加一个全局message的状态
         Message({
@@ -39,6 +40,7 @@ export default (url, params, method, config) => {
     }).catch((err) => {
       store.commit('HIDE_PAGE_LOADING');
       reject(err);
+      debugger;
       // 出现400+，500+错误
       errorHandle(err);
     });

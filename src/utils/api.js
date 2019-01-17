@@ -22,5 +22,6 @@ export default {
   /* 公共 */
   getUserRoleAPI: API('/permissions'),
   loginApi: API('/log'),
-  getDataAPI: API('/user/nologin/loadCatLog')
+  getDataAPI: API('/user/nologin/loadCatLog'),
+  getMenuListAPI: API('/permissions'), // menu
 };

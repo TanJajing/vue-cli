@@ -11,13 +11,18 @@ const staticRoutes = [
     ]
   }
 ];
-
+// 
 const dynamicRoutes = [
   {
     path: '/',
     component: Container,
     children: [
-      { path: '/home', component: Home, meta: { menuId: 1 } }
+      { path: '/home', component: Home, meta: { menuId: 1 } },
+      { path: '/home1', component: Home, meta: { menuId: 2 } },
+      { path: '/home2', component: Home, meta: { menuId: 5 } },
+      { path: '/home4', component: Home, meta: { menuId: 9 } },
+      { path: '/home5', component: Home, meta: { menuId: 8 } },
+      { path: '/home6', component: Home, meta: { menuId: 6 } }
     ]
   }
 ];
@@ -28,7 +33,6 @@ class AddRoutes {
   }
 
   addDynamicRoutes (list) {
-    debugger;
     let newRoutes = [{
       path: '/',
       component: Container,
@@ -37,17 +41,10 @@ class AddRoutes {
 
     const routeArr = [];
     this.dynamicRoutes.map(val => {
-      /* if (!val.meta || (val.meta && !val.meta.menuId)) {
-        routeArr.push(val);
-        return false;
-      } */
-      // list为已经扁平化具有menuId的路由
-      console.log(list);
       list.map(cval => {
-        routeArr.push(val);
-        /* if (val.meta.menuId === cval) {
-          // routeArr.push(val);
-        // } */
+        if (val.meta.menuId === cval) {
+          routeArr.push(val);
+        }
       });
     });
     newRoutes[0].children = routeArr;

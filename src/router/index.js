@@ -7,6 +7,7 @@ import AddRoutes from './AddRoutes';
 Vue.use(Router);
 
 const router = new Router({
+  mode: 'history',
   routes: new AddRoutes().staticRoutes
 });
 
