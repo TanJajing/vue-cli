@@ -7,11 +7,6 @@ const actions = {
       commit(types.CURRENT_MENU_LIST, res.data);
     });
   },
-  getData: ({ commit }, params) => {
-    return API.getDataAPI(params).then(res => {
-      return res;
-    });
-  },
   getUserRole ({ commit }, params) {
     return API.getUserRoleAPI(params).then(res => {
       commit(types.USER_ROLE_LIST, res.data);
@@ -19,7 +14,6 @@ const actions = {
   },
   goFirstPage ({ commit, state }, params) {
     const path = state.root.getFirstPageRoute;
-    debugger;
     commit(types.ROUTE_CHANGE, {
       path
     });

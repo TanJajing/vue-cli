@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+    {{currentUser}}
   </div>
 </template>
 
@@ -10,6 +11,7 @@ export default {
   name: 'App',
   computed: {
     ...mapState({
+      currentUser: ({ root }) => root.currentUser,
       currentRoute: ({ root }) => root.currentRoute
     })
   },

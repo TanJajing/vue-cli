@@ -1,8 +1,8 @@
 <template>
 <div>
-  {{currentMenuList}}/{{$route.path}}
+  {{currentUser}}/{{$route.path}}
   <el-menu :default-active="$route.path" :router="true">
-    <div v-for="(item, i) in currentMenuList" :key="i">
+    <div v-if="item.isShow" v-for="(item, i) in currentUser.menuList" :key="i">
       <el-menu-item :index="item.url">
         <i :class="item.icon"></i>
         <span slot="title">{{item.name}}</span>
@@ -18,7 +18,7 @@ export default {
   name: 'ConHeader',
   computed: {
     ...mapState({
-      currentMenuList: ({ root }) => root.currentMenuList
+      currentUser: ({ root }) => root.currentUser
     })
   }
 };

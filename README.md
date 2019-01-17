@@ -16,6 +16,8 @@
 
 > js-cookie // npm install --save js-cookie
 
+> babel-polyfill // IE npm install --save-dev babel-polyfill
+
 
 
 ## Build Setup

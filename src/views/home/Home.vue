@@ -1,8 +1,10 @@
 <template>
-<div>你好
+<div>
+  -------------------------------------------------------------
+  {{currentUser}}
 <el-button class="btn-ooo" @click="sureOkk">确定</el-button>
   <Select v-if="testList" v-model="datalist.testValue" style="width:200px">
-    <Option v-for="item in testList" :value="item.value" :key="item.value">{{ item.id }}</Option>
+    <Option v-for="item in testList" :index="item.id" :value="item.value" :key="item.value">{{ item.id }}</Option>
   </Select>
 </div>
 </template>
@@ -17,8 +19,12 @@ export default {
       }
     };
   },
+  beforMount () {
+    this.getData();
+  },
   computed: {
     ...mapState({
+      currentUser: ({ root }) => root.currentUser,
       testList: ({ home }) => home.testList.list
     })
   },

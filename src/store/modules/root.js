@@ -1,6 +1,7 @@
 import * as types from '../types';
 import AddRoutes from '@/router/AddRoutes';
 import router from '@/router/';
+import { MENU_PERMISSIONS } from '@/config';
 
 const state = {
   getFirstPageRoute: '', // 登录之后第一个跳转的页面
@@ -27,13 +28,22 @@ const mutations = {
     state.userRoleList = data;
   },
   [types.CURRENT_MENU_LIST] (state, data) {
+    debugger;
     // 当前用户拥有的菜单权限，根据规则显示
-    state.currentMenuList = data;
+    let menuList = MENU_PERMISSIONS;
     let menuIds = [];
     data.map(val => {
       menuIds.push(val.menuId);
     });
+    menuIds.map(val => {
+      menuList.map(item => {
+        if (val === item.menuId) {
+          item.isShow = true;
+        }
+      });
+    });
     state.currentUser.menuIds = menuIds;
+    state.currentUser.menuList = menuList;
   },
   // 改变当前路由
   [types.ROUTE_CHANGE] (state, data) {

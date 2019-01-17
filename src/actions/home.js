@@ -4,7 +4,11 @@ import * as types from '../store/types';
 const actions = {
   getData: ({ commit }, params) => {
     return API.getDataAPI(params).then(res => {
-      commit(types.TEST_LIST, res.data);
+      // commit(types.TEST_LIST, res.data);
+      commit(types.ROUTE_CHANGE, {
+        path: '/home'
+      });
+      debugger;
     });
   }
 };

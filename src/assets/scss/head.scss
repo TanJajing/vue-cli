@@ -1,0 +1,290 @@
+/* top 区域 */
+.nav-top {
+  height: $height30;
+  line-height: $height30;
+  background: $divBg;
+  .tr-icon {
+    color: $colorBlue;
+    margin-right: 3px;
+  }
+  .top-right {
+    float: right;
+    height: $height30;
+    .top-li {
+      position: relative;
+      z-index: 10;
+      float: left;
+      padding: 0 $defaultMargin11;
+      color: $colorGrey;
+      cursor: $hand;
+      p {
+        color: $colorGrey;
+        line-height: $height30;
+        a {
+          color: $colorGrey;
+        }
+      }
+      p:hover, & a:hover {color: $defaultBlue;}
+      &::after {
+        display: block;
+        width: 1px;
+        height: $fontSize12;
+        background: #DCDCDC;
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -1px;
+      }
+      &:nth-child(1)::after { display: none; }
+      .tl-icon {
+        @extend .tr-icon;
+        float: left;
+      }
+    }
+    .qr-code {
+      width: 83px;
+      padding: 0 !important;
+      p {
+          height: 31px;
+          margin-bottom: -1px;
+          position: relative;
+          z-index: 2;
+          text-align: center;
+      }
+      & > div {
+          width: 150px;
+          height: 150px;
+          border: 1px $borderColor solid;
+          background: #fff;
+          margin-bottom: -1px;
+          background-color: #fff;
+          margin-left: -70px;
+      }
+    }
+    .active {
+      padding: 0 10px;
+      box-sizing: border-box;
+      border: 1px $borderColor solid;
+      background: #fff;
+      margin-top: -1px;
+      & > div {
+        display: block;
+        p:hover {color: $defaultBlue}
+      }
+      &.qr-code p {background: #fff;}
+    }
+  }
+  .top-province {
+    float: left;
+    height: $height30;
+    .top-choose-province {
+      float: left;
+      position: relative;
+      z-index: 999;
+      margin-left: 10px;
+      p {position: relative; text-align: center;}
+      .all-region {
+        display: none;
+        width: 384px;
+        height: 120px;
+        padding: 6px;
+        border: 1px $borderColor solid;
+        background: #fff;
+        margin-bottom: -1px;
+        margin-top: -1px;
+        background-color: #fff;
+      }
+    }
+    .active {
+      p {
+        display: inline-block;
+        box-sizing: border-box;
+        border: 1px $borderColor solid;
+        border-bottom: 0;
+        padding: 0 10px;
+        background: #fff;
+        margin-top: -1px;
+      }
+      i {cursor: pointer;}
+      .all-region { display: block;}
+    }
+  }
+  .top-province .all-region a {padding: 0 6px; display: block; float: left; text-align: center; width: 36px;}
+  .top-province .all-region .un-click {color: $colorGrey; cursor: no-drop;}
+  .top-province .all-region .un-click:hover {color: $colorGrey;}
+}
+/* logo 和 search 区 */
+.nav-search {
+  height: 67px;
+  background: #fff;
+  padding-top: 25px;
+  .nav-logo {
+    width: 300px;
+    height: 43px;
+    line-height: 43px;
+    background: #fff;
+  }
+  .search-box {
+    float: right;
+    width: 580px;
+    height: 38px;
+    border: 2px
+    $borderBlueColor solid;
+    .active > div { display: block; background: #fff;}
+    .sear-item { float: left; width: 385px; display: table; position: relative;}
+    .sear-content {
+      display: none;
+      position: absolute;
+      width: 100%;
+      width: 391px;
+      background: #fff;
+      border: 1px $borderColor solid;
+      border-top: 0;
+      margin-left: -1px;
+      margin-top: 8px;
+      max-height: 150px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      p {
+        margin: 0 8px;
+        padding: 6px 0;
+        border-bottom: 1px $borderColor solid;
+        margin-bottom: -1px;
+      }
+    }
+    .sear-btn {
+      float: right;
+      width: 108px;
+      height: 38px;
+      line-height: 38px;
+      font-size: $fontSize14;
+      color: #fff;
+      text-align: center;
+      background: #0094D5;
+      background: linear-gradient(to top right, #31B3EC, #0094D5);
+      cursor: $hand;
+    }
+    .sear-btn:hover, & .sear-btn-active {
+      background: #31B3EC;
+      background: linear-gradient(to top right, #0094D5, #31B3EC);
+    }
+  }
+  .sear-type {
+    float: left;
+    width: 79px;
+    line-height: 37px;
+    text-align: center;
+    border-right: 1px $borderColor solid;
+    cursor: $hand;
+    & > div {
+      display: none;
+      margin-top: -1px;
+      border-left: 1px $borderColor solid;
+      border-bottom: 1px $borderColor solid;
+    }
+    & p {
+      line-height: 36px;
+    }
+    .hover:hover {background: $divBg;}
+  }
+  .sear-item-flex {
+    display: table-row;
+    .flex {
+      display: table-cell;
+      max-width: 60%;
+      margin-top: 9px;
+      .sear-input {
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+        line-height: 20px;
+        outline: 0;
+        border: 0;
+        &.no-tag {
+          padding: 9px 10px;
+        }
+      }
+    }
+    .tag {
+      display: table-cell;
+      text-align: right;
+      span{
+        display: block;
+        float: right;
+        width: 62px;
+        margin-right: 6px;
+        margin-top: 8px;
+        padding: 2px 5px;
+        background: $divBg;
+        color: $colorGrey;
+        border-radius: 2px;
+        line-height: 18px;
+        text-align: center;
+      }
+      .active { background: $divBg; color: $defaultBlue;}
+    }
+  }
+}
+/* 导航部分 */
+.nav-bar {
+  height: $height30;
+  line-height: $height30;
+  background: #fff;
+  .all-item {
+    height: $height30;
+    line-height: $height30;
+    float: left;
+    width: 125px;
+    background: #31B3EC;
+    color: #fff;
+    padding: 0 40px;
+    font-size: 14px;
+    text-align: center;
+  }
+  a {
+    display: block;
+    float: left;
+    padding: 0 30px;
+    font-size: 14px;
+    color: #222;
+    text-decoration: none;
+  }
+   .store {
+    float: right;
+    font-size: 14px;
+    color: #222;
+    padding: 0;
+  }
+  .router-link-active {
+    color: $defaultBlue;
+  }
+}
+/* 面包屑 */
+.crumbs {
+  height: 16px; line-height: 16px; padding: 10px 0;
+  .clear  {
+    color: #31B3EC;
+    padding: 0 6px;
+  }
+  .one-level {
+    color: $colorGrey;
+  }
+  .multistage {
+    color: $colorBlack;
+  }
+  .operable {
+    color: $colorGrey;
+    background: $divBg;
+    margin-right: 10px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    .icon {font-size: 12px;}
+    & span {
+      @extend .clear;
+    }
+  }
+}

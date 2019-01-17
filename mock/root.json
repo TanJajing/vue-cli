@@ -1,6 +1,6 @@
 [
   {
-    "url": "/permissions",
+    "url": "/admin/new/permissions",
     "desc": "测试接口",
     "mock": true,
     "res": {
@@ -11,11 +11,13 @@
       "data": [
         {
           "menuId": 1,
-          "name": "首页"
+          "name": "首页",
+          "isShow": true
         },
         {
           "menuId": 2,
           "name": "数据分析",
+          "isShow": false,
           "children": [
             {
               "menuId": 3,
@@ -32,6 +34,7 @@
         {
           "menuId": 5,
           "name": "任务管理",
+          "isShow": false,
           "children": [
             {
               "menuId": 6,
@@ -53,6 +56,7 @@
         {
           "menuId": 9,
           "name": "系统配置",
+          "isShow": false,
           "children": [
             {
               "menuId": 10,

@@ -20,7 +20,7 @@ const upload = (url, method) => params => {
 
 export default {
   /* 公共 */
-  getUserRoleAPI: API('/permissions'),
+  getUserRoleAPI: API(development + '/admin/new/permissions'),
   loginApi: API('/log'),
   getDataAPI: API('/user/nologin/loadCatLog'),
   getMenuListAPI: API('/permissions'), // menu

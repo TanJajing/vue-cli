@@ -1,7 +1,8 @@
 <template>
 <div>
   <ConHeader></ConHeader>
-
+  -------------------------------------------------------------
+  {{currentUser}}
 </div>
 </template>
 
@@ -17,6 +18,7 @@ export default {
   },
   computed: {
     ...mapState({
+      currentUser: ({ root }) => root.currentUser,
       pageLoading: ({ root }) => root.pageLoading
     })
   },

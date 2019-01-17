@@ -11,7 +11,6 @@ const staticRoutes = [
     ]
   }
 ];
-// 
 const dynamicRoutes = [
   {
     path: '/',
@@ -20,7 +19,7 @@ const dynamicRoutes = [
       { path: '/home', component: Home, meta: { menuId: 1 } },
       { path: '/home1', component: Home, meta: { menuId: 2 } },
       { path: '/home2', component: Home, meta: { menuId: 5 } },
-      { path: '/home4', component: Home, meta: { menuId: 9 } },
+      { path: '/home3', component: Home, meta: { menuId: 9 } },
       { path: '/home5', component: Home, meta: { menuId: 8 } },
       { path: '/home6', component: Home, meta: { menuId: 6 } }
     ]
