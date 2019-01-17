@@ -17,7 +17,7 @@ router.beforeEach((to, from, next) => {
     // let token = Cookies.get('loginToken');
 
     if (true) { // 是否拦截登录
-      if (true) { // 判断是否有sessionID，是否需要重新获取路由
+      if (false) { // 判断是否有sessionID，是否需要重新获取路由
         (async () => {
           await store.dispatch('getMenuList');
           // replace重新获取route对象
