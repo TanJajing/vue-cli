@@ -1,7 +1,7 @@
 [
   {
-    "url": "/home",
-    "desc": "有页面",
+    "url": "/user/nologin/loadCatLog",
+    "desc": "获取合作集团/编码列表",
     "mock": true,
     "res": {
       "errorInfo": {
@@ -9,61 +9,10 @@
         "message": "请求成功"
       },
       "data": {
-        "totalcount": 2,
-        "list": []
+        "list": [
+          { "value": "南拳妈妈龙虾盖浇饭", "id": "普陀区金沙江路1699号鑫乐惠美食广场A13" }
+        ]
       }
-    }
-  },
-  {
-    "url": "/",
-    "desc": "",
-    "mock": true,
-    "res": {
-      "errorInfo": {
-        "code": "200",
-        "message": "请求成功"
-      },
-      "data": {
-        "list": []
-      }
-    }
-  },
-  {
-    "url": "/",
-    "desc": "",
-    "mock": true,
-    "res": {
-      "errorInfo": {
-        "code": "200",
-        "message": "请求成功"
-      },
-      "data": {
-        "list": []
-      }
-    }
-  },
-  {
-    "url": "/",
-    "desc": "",
-    "mock": true,
-    "res": {
-      "errorInfo": {
-        "code": "200",
-        "message": "请求成功"
-      },
-      "data": "success"
-    }
-  },
-  {
-    "url": "/business-manage/chuliren",
-    "desc": "商机总览",
-    "mock": true,
-    "res": {
-      "errorInfo": {
-        "code": "200",
-        "message": "请求成功"
-      },
-      "data": {}
     }
   }
 ]

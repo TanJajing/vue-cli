@@ -5,9 +5,12 @@ import App from './App';
 import router from './router';
 import store from './store';
 import ElementUI from 'element-ui';
+import echarts from 'echarts';
 import './assets/font/iconfont.css';
-import 'babel-polyfill';
 import 'element-ui/lib/theme-chalk/index.css';
+import 'babel-polyfill';
+
+Vue.prototype.$echarts = echarts;
 
 Vue.use(ElementUI);
 

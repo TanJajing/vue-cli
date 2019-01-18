@@ -1,0 +1,97 @@
+[
+  {
+    "url": "/item/itemDetail/itemDetailQuery",
+    "desc": "商品详情",
+    "mock": true,
+    "res": {
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
+      "data": {
+        "favourablePrice": 4245,
+        "introductionContent": "",
+        "itemSaleFlag": 1,
+        "marketPrice": 4456,
+        "mchtId": 11,
+        "mchtName": "测试终端公司",
+        "mchtType": 1,
+        "onSale": true,
+        "price": 4245,
+        "priceFormat": "4245.00",
+        "productPicObjList": [
+          {
+            "sPic": "www.hedongli.com"
+          }
+        ],
+        "quantityInStock": 4995,
+        "skuCode": "62536",
+        "skuContractPrice": 0,
+        "skuId": 62536,
+        "skuName": "苹果_A1699 16G 灰,16G单电单充,公开版,销售用机",
+        "skuTypeName": "A1699（6S plus）",
+        "skuUnitSpecsList": [
+          {
+            "skuId": 82010,
+            "specTips": "    灰色        128G        非定制        销售机   "
+          },
+          {
+            "skuId": 82089,
+            "specTips": "    粉色        64G        非定制        销售机   "
+          },
+          {
+            "skuId": 62523,
+            "specTips": "玫瑰金     16G        非定制        销售机   "
+          },
+          {
+            "skuId": 82088,
+            "specTips": "    金色        64G        非定制        销售机   "
+          },
+          {
+            "skuId": 82087,
+            "specTips": "    银色        128G        非定制        销售机   "
+          },
+          {
+            "skuId": 62536,
+            "specTips": "银灰色     16G        非定制        销售机   "
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "/getAnotherStatic",
+    "desc": "单品详情页面tab切换展示其他详细信息",
+    "mock": true,
+    "res": {
+      "errorInfo": {
+        "code": "200",
+        "message": "请求成功"
+      },
+      "data": [
+        {
+          "itemDescList" : []
+        },
+        {
+          "packingList" : [
+            {"机身颜色": "灰色"},
+            {"终端制式": "LTE（全网通4G"},
+            {"机型类别": "--"},
+            {"机型分类": "智能机,智能机"},
+            {"是否定制": "公开版"},
+            {"采购类型": "总采"}
+          ]
+        },
+        {
+          "andGift" : []
+        },
+        {
+          "serviceInfo" : []
+        },
+        {
+          "echartPrice" : []
+        }
+      ]
+    }
+  }
+]

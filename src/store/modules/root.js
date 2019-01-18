@@ -1,20 +1,35 @@
 import * as types from '../types';
-import AddRoutes from '@/router/AddRoutes';
-import router from '@/router/';
-import { MENU_PERMISSIONS } from '@/config';
+import Global from '../../components/Global.vue';
 
+const rootPath = Global.rootPath;
 const state = {
   getFirstPageRoute: '', // 登录之后第一个跳转的页面
   pageLoading: false,
-  userRoleList: [],
-  currentRoute: {
-    path: ''
-  },
-  currentMenuList: {},
+  currentRoute: {},
   currentUser: {
-    menuIds: [], // 扁平化的menuId数组
-    menuList: []
-  }
+    menuList: [
+      {enable: true, url: rootPath + '/item/itemFilter/toHomePageNew', name: '首页'},
+      {enable: true, url: rootPath + '/item/itemFilter/bookMeeting', name: '订货会'},
+      {enable: true, url: rootPath + '/item/rushBuying/rushBuyingList', name: '抢购'},
+      {enable: true, url: rootPath + '/item/itemFilter/auctionHomePage.do', name: '竞拍'},
+      {enable: true, url: rootPath + '/item/itemFilter/combineSalesArea', name: '组合销售'},
+      {enable: true, url: rootPath + '/dibao/newPage/toDibaoListPage', name: '区域分销商'},
+      {enable: true, url: rootPath + '/nfd', name: 'NFD业务'},
+      {enable: true, url: rootPath + '/valueadd/AbilityApprove/toVAHome', name: '增值业务'},
+      {enable: true, url: rootPath + '/item/itemFilter/operateMchtList', name: '优质店铺', class: 'store'}
+    ],
+    operator: {
+      opRegion: null,
+      staffName: '',
+      provinces: []
+    }
+  },
+  currentNavBar: {
+    isShowNavBar: true,
+    data: [
+      {page: 'itemDetail', show: false}
+    ]
+  },
 };
 
 const mutations = {
@@ -24,35 +39,12 @@ const mutations = {
   [types.HIDE_PAGE_LOADING] (state) {
     state.pageLoading = false;
   },
-  [types.USER_ROLE_LIST] (state, data) {
-    state.userRoleList = data;
-  },
-  [types.CURRENT_MENU_LIST] (state, data) {
-    debugger;
-    // 当前用户拥有的菜单权限，根据规则显示
-    let menuList = MENU_PERMISSIONS;
-    let menuIds = [];
-    data.map(val => {
-      menuIds.push(val.menuId);
-    });
-    menuIds.map(val => {
-      menuList.map(item => {
-        if (val === item.menuId) {
-          item.isShow = true;
-        }
-      });
-    });
-    state.currentUser.menuIds = menuIds;
-    state.currentUser.menuList = menuList;
-  },
   // 改变当前路由
   [types.ROUTE_CHANGE] (state, data) {
     state.currentRoute = data;
   },
-  [types.ADD_ROUTES] (state, data) {
-    const routes = new AddRoutes();
-    router.addRoutes(routes.addDynamicRoutes(state.currentUser.menuIds));
-    state.getFirstPageRoute = routes.getFirstPageRoute;
+  [types.ROUTE_UNSHOW] (state, data) {
+    state.currentNavBar = data;
   }
 };
 

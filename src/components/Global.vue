@@ -1,6 +1,8 @@
 <script>
-const rootPath = '/admin';
+const rootPath = '/web-mall/old';
+const mchtId = 11;
 export default {
-  rootPath
+  rootPath,
+  mchtId
 };
 </script>

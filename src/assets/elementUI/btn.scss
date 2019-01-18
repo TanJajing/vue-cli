@@ -1,0 +1,40 @@
+.el-button--danger{
+  background-color: #D11670;
+  border-color: #D11670;
+  &.is-active, &:active {
+    background-color: #D11670;
+    border-color: #D11670;
+  }
+  &:focus, &:hover {
+    background-color: #ef1670;
+    border-color: #ef1670;
+  }
+}
+.el-button--primary {
+  background-color: #0094D5;
+  &.is-active, &:active {
+    background-color: #0094D5;
+  }
+  &:focus, &:hover {
+    background-color: #31B3EC;
+  }
+}
+.el-input-number__decrease {
+  
+}
+.el-input-number {
+  width: 108px;
+  height: 28px;
+  line-height: 28px;
+  .el-input__inner {
+    padding: 0 38px;
+  }
+  &__decrease, &__increase {
+    width: 28px;
+    border-radius: 0;
+  }
+  .el-input__inner {
+    height: 30px;
+    line-height: 30px;
+  }
+}

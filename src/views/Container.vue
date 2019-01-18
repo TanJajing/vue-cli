@@ -1,34 +1,24 @@
 <template>
 <div>
   <ConHeader></ConHeader>
-  -------------------------------------------------------------
-  {{currentUser}}
+  <ConSide></ConSide>
+  <div class="content-style">
+    <router-view></router-view>
+  </div>
+  <ConFooter></ConFooter>
 </div>
 </template>
 
 <script>
-import { mapActions, mapMutations, mapState } from 'vuex';
 import ConHeader from './Head.vue';
+import ConSide from './Side.vue';
+import ConFooter from './Foot.vue';
 export default {
   name: 'Container',
   components: {
-    ConHeader
-  },
-  beforeMount () {
-  },
-  computed: {
-    ...mapState({
-      currentUser: ({ root }) => root.currentUser,
-      pageLoading: ({ root }) => root.pageLoading
-    })
-  },
-  methods: {
-    ...mapActions([
-      'getMenuList'
-    ]),
-    ...mapMutations({
-      _addRoutes: 'ADD_ROUTES'
-    })
+    ConHeader,
+    ConSide,
+    ConFooter
   }
 };
 </script>

@@ -1,6 +1,6 @@
 import axios from 'axios';
+// import router from '../../router/index.js';
 import store from '../../store/index.js';
-import { Message } from 'element-ui';
 
 export default (url, params, method, config) => {
   // 去掉首尾空格
@@ -18,21 +18,15 @@ export default (url, params, method, config) => {
     } else {
       ajx = axios.post(url, params, config);
     }
-
     ajx.then(res => {
-      if (String(res.status) === '401') {
-        store.commit('ROUTE_CHANGE', { path: '/login' });
-      } else if (String(res.status) === '200') {
-        if (String(res.data.errorInfo.code) === '200') {
-          resolve(res.data);
-        }
+      if (String(res.status) === '200') {
+        // if (Number(2050) > res.errorInfo.code > Number(2001)) {
+        // router.replace('/login');
+        // }
+        resolve(res.data);
       } else {
         // 防止防止多次执行Message，需要加一个全局message的状态
-        Message({
-          showClose: true,
-          message: res.data.msg,
-          type: 'error'
-        });
+        console.log('___log' + res.data.msg);
         reject(res.data);
       }
       // 处理完事件后，再关闭加载图标
@@ -40,70 +34,10 @@ export default (url, params, method, config) => {
     }).catch((err) => {
       store.commit('HIDE_PAGE_LOADING');
       reject(err);
-      debugger;
       // 出现400+，500+错误
-      errorHandle(err);
+      // errorHandle(err);
     });
   });
 };
 
 // 错误码处理
-
-function errorHandle (err) {
-  const _Message = msg => Message({
-    showClose: true,
-    message: msg,
-    type: 'error'
-  });
-  switch (err.response.status) {
-    case 400:
-      _Message('请求错误');
-      break;
-
-    case 401:
-      _Message('未授权，请登录');
-      break;
-
-    case 403:
-      // 跳转到权限提示页面
-      _Message('拒绝访问');
-      break;
-
-    case 404:
-      _Message(`请求地址出错: ${err.config.url}`);
-      // store.commit('ROUTE_CHANGE', { path: '/404' });
-      break;
-
-    case 408:
-      _Message('请求超时');
-      break;
-
-    case 500:
-      _Message('服务器内部错误');
-      // store.commit('ROUTE_CHANGE', { path: '/500' });
-      break;
-
-    case 501:
-      _Message('服务未实现');
-      break;
-
-    case 502:
-      _Message('网关错误');
-      break;
-
-    case 503:
-      _Message('服务不可用');
-      break;
-
-    case 504:
-      _Message('网关超时');
-      break;
-
-    case 505:
-      _Message('HTTP版本不受支持');
-      break;
-
-    default:
-      _Message('未知错误');
-  }
-};

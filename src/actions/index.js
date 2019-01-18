@@ -1,9 +1,13 @@
-import home from './home';
 import root from './root';
+import head from './head';
 import login from './login';
+import home from './home';
+import itemDetail from './itemDetail';
 
 export default {
-  ...home,
   ...root,
-  ...login
+  ...head,
+  ...login,
+  ...home,
+  ...itemDetail
 };
