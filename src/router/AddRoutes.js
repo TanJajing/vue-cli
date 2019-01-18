@@ -11,7 +11,6 @@ import Dibao from '@/views/dibao/Dibao.vue';
 import NFD from '@/views/nfd/NFD.vue';
 import OperateMcht from '@/views/operateMcht/OperateMcht.vue';
 import ItemDetail from '@/views/itemDetail/ItemDetail.vue';
-import ItemInfo from '@/views/itemInfo/ItemInfo.vue';
 const routes = [
   { path: '/login', component: Login, meta: { skipAuth: true } },
   { path: '/toVA', component: Iframe },
@@ -19,8 +18,8 @@ const routes = [
     path: '/',
     component: Container,
     children: [
-      { path: '/home', component: Home },
-      { path: '/bookMeeting', component: BookMeeting },
+      { path: '/home', component: Home, meta: { title: '首页', content: 'disable' } },
+      { path: '/bookMeeting', component: BookMeeting, meta: { title: '订货会', content: 'disable' } },
       { path: '/rushBuying', component: RushBuying },
       { path: '/auction', component: Auction },
       { path: '/combineSales', component: CombineSales },
@@ -28,7 +27,6 @@ const routes = [
       { path: '/nfd', component: NFD },
       { path: '/operateMcht', component: OperateMcht },
       { path: '/itemDetail', name: 'itemDetail', component: ItemDetail },
-      { path: '/itemInfo', component: ItemInfo },
       { path: '*', component: Page404 }
     ]
   }

@@ -2,7 +2,6 @@
 @import 'variables.scss';
 @import 'reset.scss';
 @import 'normalize.scss';
-@import 'scss/head.scss';
-@import 'scss/side.scss';
-@import 'scss/foot.scss';
 @import 'elementUI/btn.scss';
+@import '/scss/head.scss';
+@import '/scss/foot.scss';

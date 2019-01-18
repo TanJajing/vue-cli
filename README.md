@@ -1,4 +1,4 @@
-# web-mall
+# mobile
 
 > B2B 和动力平台
 

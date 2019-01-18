@@ -1,18 +1,16 @@
 module.exports = {
-  '/web-mall/new': {
-    target: 'http://192.168.1.104:8082',
-    changeOrigin: true,
-    secure: false,
-    pathRewrite: { 
-      '^/web-mall/new': '/' //路径重写 
-    }
-  },
-  '/web-mall/old': {
+  '/mobile': {
     target: 'http://www.hedongli.com',
     changeOrigin: true,
-    secure: false,
-    pathRewrite: { 
-      '^/web-mall/old': '/web-mall' //路径重写
+    pathRewrite: {
+      '^/mobile': 'mobile'
+    }
+  },
+  '/new-mobile': {
+    target: 'http://news.baidu.com',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/new-mobile': 'guonei'
     }
   }
-};
+}

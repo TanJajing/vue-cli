@@ -6,8 +6,7 @@ const actions = {
   login ({ commit, dispatch }, params = {}) {
     return new Promise((resolve, reject) => {
       API.loginApi(params).then(async res => {
-        await dispatch('getSystemInfo');
-        router.replace('/item/itemFilter/toHomePageNew');
+        router.replace('/home');
         resolve(res);
       }, err => {
         reject(err);

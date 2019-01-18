@@ -1,5 +1,5 @@
 <script>
-const rootPath = '/web-mall/old';
+const rootPath = '/mobile';
 const mchtId = 11;
 export default {
   rootPath,

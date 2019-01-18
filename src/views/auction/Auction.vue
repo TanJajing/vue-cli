@@ -1,5 +1,5 @@
 <template>
-<div class="div-center" style="line-height: 80px;">你好, 我是竞拍</div>
+<div style="line-height: 80px;">你好, 我是竞拍</div>
 </template>
 
 <script>

@@ -1,7 +1,4 @@
 a, a:active {color: #666; text-decoration: none;} a:hover {color: $colorBlue;}
-
-.mr5 {margin-right: 5px;} .mr6 {margin-right: 6px;} .ml6 {margin-left: 6px;}
-.mt20 {margin-top: 20px;}
 .omit {display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .omit_2 {display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;}
 img[src=""], img:not([src]) {opacity: 0;}
@@ -10,35 +7,15 @@ img[src=""], img:not([src]) {opacity: 0;}
 .fr {float: right;}
 .bold {font-weight: 700;}
 // div 
-.div-center { width: 1200px; margin: 0 auto;}
+.div-center { width: 1080px; margin: 0 auto;}
 .content-style {min-height: 100px;}
-// 广告提示
-.ad-mark {
-	position: relative;
-	z-index: 999;
-}
-.ad-mark::after {
-  content: '广告';
-  display: block;
-  font-size: 12px;
-  background: #f1f1f1;
-  width: 34px;
-  height: 16px;
-  line-height: 16px;
-  text-align: center;
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  border-radius: 8px;
-  font-size: 12px;
-}
 /* 登录&注册 Btn */
 .btn {padding: 6px 28px; margin: 0 5px; line-height: $btnDefault; border-radius: 15px;}
 .btn-blue {color: #fff; border: 1px #0094D5 solid; background: #0094D5; background: linear-gradient(to top right, #31B3EC, #0094D5);}
 .btn-white {border: 1px #31B3EC solid; color: $defaultBlue;}
 .btn-blue:hover {color: #fff; border: 1px #31B3EC solid; background: #31B3EC; background: linear-gradient(to top right, #0094D5, #31B3EC);}
 .btn-white:hover {border: 1px #0094D5 solid; color: #0094D5;}
-.btn-default {padding: 6px 28px; margin: 0 5px; line-height: 30px; font-size: 14px;}
+.btn-default {padding: 6px 28px; margin: 0 5px; line-height: 30px; font-size: 1.4rem;}
 .btn-small {display: inline-block; margin: 0 5px; height: 22px; line-height: 22px; padding: 0 13px;}
 .btn-rose {background: #D11670; color: #fff;}
 .btn-rose:hover {color: #fff;}

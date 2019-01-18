@@ -1,5 +1,5 @@
 <template>
-<div class="div-center">
+<div>
   <!-- top -->
   跳转----------
 </div>

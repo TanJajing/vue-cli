@@ -1,5 +1,5 @@
 {
-  "name": "web-mall",
+  "name": "mobile",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "tanjj",
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "echarts": "^4.2.0-rc.2",
     "element-ui": "^2.4.11",
     "js-cookie": "^2.2.0",
     "mockjs": "^1.0.1-beta3",

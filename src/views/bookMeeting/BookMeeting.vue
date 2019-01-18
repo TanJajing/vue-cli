@@ -1,5 +1,5 @@
 <template>
-<div class="div-center" style="line-height: 80px;">你好, 我是订货会</div>
+<div style="line-height: 80px;">你好, 我是订货会</div>
 </template>
 
 <script>
