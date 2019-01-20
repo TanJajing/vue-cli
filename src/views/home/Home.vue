@@ -1,7 +1,5 @@
 <template>
 <div>
-  -------------------------------------------------------------
-  {{currentUser}}
 <el-button class="btn-ooo" @click="sureOkk">确定</el-button>
   <Select v-if="testList" v-model="datalist.testValue" style="width:200px">
     <Option v-for="item in testList" :index="item.id" :value="item.value" :key="item.value">{{ item.id }}</Option>

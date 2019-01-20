@@ -1,5 +1,5 @@
 <script>
-const rootPath = '/admin';
+const rootPath = '/console';
 export default {
   rootPath
 };
